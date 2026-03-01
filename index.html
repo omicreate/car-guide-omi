@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>後悔しない車選び | Omiさん専用ガイド 2026</title>
+<style>
+:root {
+  --yaris: #E8401C;
+  --yaris-light: #FFF0ED;
+  --fronx: #1A6BB5;
+  --fronx-light: #EEF5FF;
+  --dark: #1A1A2E;
+  --text: #2C3E50;
+  --gray: #7F8C8D;
+  --bg: #F8F9FA;
+  --card: #FFFFFF;
+  --green: #27AE60;
+  --gold: #F39C12;
+  --radius: 16px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.hero {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+  color: white;
+  padding: 40px 20px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(232,64,28,0.1) 0%, transparent 60%);
+  animation: pulse 4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
+.hero-badge {
+  display: inline-block;
+  background: var(--yaris);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: clamp(22px, 6vw, 34px);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 span { color: #FFD700; }
+.hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-tag {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 8px;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav-item {
+  flex-shrink: 0;
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-item.active { color: var(--yaris); border-bottom-color: var(--yaris); }
+.section {
+  display: none;
+  padding: 24px 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+.section.active { display: block; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title .icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.verdict-card {
+  background: linear-gradient(135deg, var(--yaris) 0%, #C0392B 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 32px rgba(232,64,28,0.3);
+}
+.verdict-card h2 { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+.verdict-card p { font-size: 14px; opacity: 0.9; line-height: 1.6; }
+.recommend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.spec-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.spec-table tr { border-bottom: 1px solid #F0F0F0; }
+.spec-table tr:last-child { border-bottom: none; }
+.spec-table td { padding: 10px 8px; vertical-align: top; }
+.spec-table td:first-child { color: var(--gray); font-size: 13px; width: 40%; font-weight: 500; }
+.spec-table td:last-child { font-weight: 600; color: var(--text); }
+.spec-highlight { color: var(--yaris) !important; font-weight: 800 !important; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+.compare-table th { padding: 10px 8px; text-align: center; font-weight: 700; font-size: 12px; }
+.compare-table th:nth-child(2) { background: var(--yaris-light); color: var(--yaris); }
+.compare-table th:nth-child(3) { background: var(--fronx-light); color: var(--fronx); }
+.compare-table td { padding: 10px 8px; text-align: center; border-bottom: 1px solid #F5F5F5; vertical-align: middle; }
+.compare-table td:first-child { text-align: left; color: var(--gray); font-size: 12px; font-weight: 500; }
+.compare-table td:nth-child(2) { background: rgba(232,64,28,0.04); font-weight: 600; }
+.compare-table td:nth-child(3) { background: rgba(26,107,181,0.04); font-weight: 600; }
+.win { color: var(--green); font-weight: 800 !important; }
+.chart-img { width: 100%; border-radius: 12px; margin: 12px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.highlight-box { border-radius: 12px; padding: 16px; margin: 12px 0; }
+.highlight-box.green { background: #E8F8F0; border-left: 4px solid var(--green); }
+.highlight-box.red { background: var(--yaris-light); border-left: 4px solid var(--yaris); }
+.highlight-box.blue { background: var(--fronx-light); border-left: 4px solid var(--fronx); }
+.highlight-box.gold { background: #FEF9E7; border-left: 4px solid var(--gold); }
+.highlight-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.highlight-box p { font-size: 13px; line-height: 1.6; color: var(--text); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 12px 0; }
+.stat-card { background: var(--bg); border-radius: 12px; padding: 14px 12px; text-align: center; }
+.stat-card .label { font-size: 11px; color: var(--gray); margin-bottom: 6px; font-weight: 500; }
+.stat-card .value { font-size: 20px; font-weight: 800; line-height: 1.2; }
+.stat-card .sub { font-size: 11px; color: var(--gray); margin-top: 4px; }
+.timeline { position: relative; padding-left: 24px; margin: 12px 0; }
+.timeline::before { content:''; position:absolute; left:8px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--yaris), var(--green)); }
+.timeline-item { position: relative; margin-bottom: 16px; }
+.timeline-item::before { content:''; position:absolute; left:-20px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--yaris); border:2px solid white; box-shadow:0 0 0 2px var(--yaris); }
+.timeline-item h4 { font-size: 14px; font-weight: 700; color: var(--yaris); margin-bottom: 4px; }
+.timeline-item p { font-size: 13px; color: var(--text); line-height: 1.5; }
+.checklist { list-style: none; }
+.checklist li { padding: 8px 0; font-size: 14px; display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid #F5F5F5; }
+.checklist li:last-child { border-bottom: none; }
+.checklist li::before { content:'✅'; font-size:14px; flex-shrink:0; margin-top:1px; }
+.checklist li.warn::before { content:'⚠️'; }
+.checklist li.info::before { content:'ℹ️'; }
+.section-header { text-align: center; margin-bottom: 20px; }
+.section-header h2 { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+.section-header p { font-size: 13px; color: var(--gray); }
+.rating-bar { margin: 8px 0; }
+.rating-bar .label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; }
+.rating-bar .bar { height: 8px; background: #F0F0F0; border-radius: 4px; overflow: hidden; }
+.rating-bar .fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+.rating-bar .fill.yaris { background: var(--yaris); }
+.rating-bar .fill.fronx { background: var(--fronx); }
+.note { font-size: 11px; color: var(--gray); margin-top: 8px; line-height: 1.5; }
+.accordion { border: 1px solid #F0F0F0; border-radius: 12px; overflow: hidden; margin: 8px 0; }
+.accordion-header { padding: 14px 16px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: white; }
+.accordion-header::after { content:'▼'; font-size:11px; color:var(--gray); transition:transform 0.2s; }
+.accordion-header.open::after { transform: rotate(180deg); }
+.accordion-body { display: none; padding: 0 16px 16px; font-size: 13px; line-height: 1.6; color: var(--text); background: white; }
+.accordion-body.open { display: block; }
+footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 16px; font-size: 11px; line-height: 1.8; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🚗 Omiさん専用 車選びガイド 2026</div>
+  <h1>減価償却から考える<br><span>後悔しない車選び</span></h1>
+  <p class="hero-sub">ミラココア → 1台買い替え完全分析（奥様のキャンバスはそのまま）</p>
+  <div class="hero-tags">
+    <span class="hero-tag">📊 実データ分析</span>
+    <span class="hero-tag">💴 コストシミュレーション</span>
+    <span class="hero-tag">🔒 安全性能</span>
+    <span class="hero-tag">📅 5〜10年長期保有</span>
+  </div>
+</div>
+
+<div class="nav-wrapper">
+  <div class="nav" id="mainNav">
+    <div class="nav-item active" onclick="showSection('summary',this)">📋 結論</div>
+    <div class="nav-item" onclick="showSection('yaris',this)">🔴 ヤリスクロス</div>
+    <div class="nav-item" onclick="showSection('fronx',this)">🔵 フロンクス</div>
+    <div class="nav-item" onclick="showSection('compare',this)">⚖️ 比較</div>
+    <div class="nav-item" onclick="showSection('cost',this)">💴 コスト</div>
+    <div class="nav-item" onclick="showSection('loan',this)">🏦 ローン</div>
+    <div class="nav-item" onclick="showSection('longterm',this)">📅 長期保有</div>
+    <div class="nav-item" onclick="showSection('grade',this)">🏷️ グレード選び</div>
+    <div class="nav-item" onclick="showSection('advice',this)">💡 アドバイス</div>
+  </div>
+</div>
+
+<!-- ===== 結論 ===== -->
+<div id="summary" class="section active">
+  <div class="verdict-card">
+    <div style="font-size:12px;opacity:0.8;margin-bottom:8px;">🏆 Omiさんへの最終結論</div>
+    <h2>ヤリスクロス HV Z が最適解</h2>
+    <p>残価率71.9%（5年後・業者オークション実データ）、燃費27.8km/L、HVバッテリー10年保証。減価償却の観点から最も「もったいなくない」選択です。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">🎯</div>なぜヤリスクロスなのか</div>
+    <div class="grid-3">
+      <div class="stat-card">
+        <div class="label">5年後残価率</div>
+        <div class="value" style="color:var(--yaris);">71.9%</div>
+        <div class="sub">業者オークション実データ</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">燃費(WLTC)</div>
+        <div class="value" style="color:var(--green);">27.8</div>
+        <div class="sub">km/L（HV Z）</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">HV保証</div>
+        <div class="value" style="color:var(--fronx);">10年</div>
+        <div class="sub">バッテリー保証</div>
+      </div>
+    </div>
+    <div class="highlight-box green" style="margin-top:12px;">
+      <h4>✅ 長期保有でこそ真価を発揮</h4>
+      <p>5年でローン完済後、月々の返済がゼロに。その後2〜3年乗り続けることで1年あたりのコストが最小化されます。5〜7年保有が最もコスパ優秀です。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">💴</div>5年間コストサマリー</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">項目</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>新車価格</td><td>288.7万円</td><td class="win">254.1万円</td></tr>
+        <tr><td>5年後売却額（推定）</td><td class="win">約208万円（71.9%）</td><td>約119万円（47%）</td></tr>
+        <tr><td>5年間維持費合計</td><td class="win">約96万円</td><td>約111万円</td></tr>
+        <tr><td>5年間実質負担</td><td class="win" style="color:var(--yaris);">約177万円</td><td>約246万円</td></tr>
+        <tr><td>月換算（5年）</td><td class="win" style="color:var(--yaris);">約2.95万円/月</td><td>約4.1万円/月</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※維持費はガソリン代（年1万km・170円/L）・保険・税金・車検を含む。売却額は業者オークション実データ（ヤリスクロス）および推定値（フロンクス）。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">📋</div>Omiさんの条件チェック</div>
+    <ul class="checklist">
+      <li>週末テニス利用に最適なコンパクトSUVサイズ</li>
+      <li>燃費27.8km/L（フロンクスの約1.5倍）で年間ガソリン代を節約</li>
+      <li>Toyota Safety Sense 全グレード標準装備（最新安全技術）</li>
+      <li>人を乗せても恥ずかしくないSUVデザイン</li>
+      <li>HVバッテリー10年保証で長期保有リスク低</li>
+      <li>最新技術（デジタルインナーミラー・ディスプレイオーディオ）</li>
+      <li>奥様のキャンバスとサイズが被らない（普通車SUV）</li>
+      <li class="info">新車・綺麗な中古どちらも選択可能</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== ヤリスクロス ===== -->
+<div id="yaris" class="section">
+  <div class="section-header">
+    <h2>🔴 トヨタ ヤリスクロス HV Z</h2>
+    <p>Omiさんへの最終推薦車</p>
+  </div>
+  <div class="recommend-badge">🏆 最終推薦車</div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📐</div>基本スペック</div>
+    <table class="spec-table">
+      <tr><td>新車価格</td><td class="spec-highlight">288.7万円（HV Z）/ 239.4万円（HV G）</td></tr>
+      <tr><td>エンジン</td><td>1.5L 直3 + モーター（ハイブリッド）</td></tr>
+      <tr><td>燃費（WLTC）</td><td class="spec-highlight">HV Z: 27.8km/L / HV G: 30.2km/L</td></tr>
+      <tr><td>ボディサイズ</td><td>全長4,180 × 全幅1,765 × 全高1,590mm</td></tr>
+      <tr><td>最小回転半径</td><td>5.3m</td></tr>
+      <tr><td>車両重量</td><td>1,170kg（HV 2WD）</td></tr>
+      <tr><td>航続距離（HV）</td><td>約900〜1,108km</td></tr>
+      <tr><td>自動車税</td><td>30,500円/年（1.5L以下）</td></tr>
+      <tr><td>重量税</td><td>初回免除（エコカー減税）→ 以降12,300円/2年</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📈</div>リセールバリュー（業者オークション実データ）</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">経過年数</th><th>平均残価率</th><th>HV Z 残価率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>当年（未使用）</td><td>92.1%</td><td>97.6%</td></tr>
+        <tr><td>1年落ち</td><td>85.4%</td><td>90.7%</td></tr>
+        <tr><td>2年落ち</td><td>86.0%</td><td>90.9%</td></tr>
+        <tr><td>3年落ち</td><td>82.5%</td><td>82.5%</td></tr>
+        <tr><td>4年落ち</td><td>83.5%</td><td>95.5%</td></tr>
+        <tr><td>5年落ち</td><td>80.3%</td><td class="win">71.9%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※出典: junku.com 業者オークション相場データ（2025年更新）。5年後71.9%は実際の買取相場から算出。</p>
+    <div class="highlight-box red" style="margin-top:12px;">
+      <h4>🔑 なぜリセールが高いのか</h4>
+      <p>シンガポール・バングラデッシュ等への輸出需要が国内相場を下支え。トヨタブランドの信頼性と世界的なSUV人気が重なり、5年後でも約208万円（HV Z・288.7万円購入時）で売却できます。</p>
+    </div>
+    <img src="images/single_resale_rate.png" alt="残価率推移グラフ" class="chart-img">
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">🛡️</div>安全装備（Toyota Safety Sense 全標準）</div>
+    <ul class="checklist">
+      <li>プリクラッシュセーフティ（歩行者・自転車・夜間対応）</li>
+      <li>レーダークルーズコントロール（全車速追従）</li>
+      <li>レーントレーシングアシスト（車線中央維持）</li>
+      <li>オートマチックハイビーム</li>
+      <li>ブラインドスポットモニター（Zグレード）</li>
+      <li>パーキングサポートブレーキ（後方・周囲）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#EEF5FF;">🎛️</div>内装・装備（Zグレード）</div>
+    <ul class="checklist">
+      <li>10.5インチディスプレイオーディオ（Apple CarPlay/Android Auto対応）</li>
+      <li>デジタルインナーミラー（後方カメラ映像）</li>
+      <li>シートヒーター（前席）・ステアリングヒーター</li>
+      <li>電動パーキングブレーキ</li>
+      <li>ワイヤレス充電（スマートフォン）</li>
+      <li>パノラミックビューモニター（全周囲カメラ）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">⚡</div>HVバッテリー保証</div>
+    <div class="highlight-box gold">
+      <h4>🔋 10年/20万km保証（条件あり）</h4>
+      <p>トヨタのハイブリッドバッテリーは10年または20万kmの保証付き（初回登録から）。長期保有でも高額修理リスクが低く、5〜7年乗り続けても安心です。30万km超の走行実績もあり、信頼性は実証済みです。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== フロンクス ===== -->
+<div id="fronx" class="section">
+  <div class="section-header">
+    <h2>🔵 スズキ フロンクス</h2>
+    <p>比較対象・第2候補</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">📐</div>基本スペック</div>
+    <table class="spec-table">
+      <tr><td>新車価格</td><td>254.1万円（2WD）/ 273.9万円（4WD）</td></tr>
+      <tr><td>エンジン</td><td>1.5L 直4 + マイルドハイブリッド（6AT）</td></tr>
+      <tr><td>燃費（WLTC）</td><td>2WD: 19.0km/L / 4WD: 17.8km/L</td></tr>
+      <tr><td>ボディサイズ</td><td>全長3,995 × 全幅1,765 × 全高1,550mm</td></tr>
+      <tr><td>最小回転半径</td><td class="spec-highlight">4.8m（ヤリスクロスより小さい）</td></tr>
+      <tr><td>車両重量</td><td>1,035kg（2WD）</td></tr>
+      <tr><td>自動車税</td><td>30,500円/年（1.5L以下）</td></tr>
+      <tr><td>発売</td><td>2024年10月（日本発売）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">📈</div>リセールバリュー（注意点あり）</div>
+    <div class="highlight-box blue">
+      <h4>ℹ️ 発売1年強のため長期データなし</h4>
+      <p>2024年10月発売のため、5年後・10年後の残価率は推定値のみ。ガリバーの現在データでは49.2〜85.1%と幅広く、安定性は未知数です。マイルドHVのため本格HVほど輸出需要が高くない可能性があります。</p>
+    </div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">データ源</th><th>残価率</th><th>備考</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>junku.com（3年落ち）</td><td>92.4%</td><td>発売直後・高め</td></tr>
+        <tr><td>ガリバー（現在）</td><td>49.2〜85.1%</td><td>幅広い</td></tr>
+        <tr><td>5年後（推定）</td><td>約47%</td><td>推定値</td></tr>
+        <tr><td>10年後（推定）</td><td>約14%</td><td>推定値</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">🎛️</div>内装・装備の強み</div>
+    <ul class="checklist">
+      <li>9インチスマートフォン連携ディスプレイオーディオ</li>
+      <li>インド向け輸出モデルベースの高級感ある内装</li>
+      <li>後席も実用的な広さ（ヤリスクロスより広め）</li>
+      <li>全長4m以下で駐車しやすい</li>
+      <li>最小回転半径4.8m（小回り利く）</li>
+      <li class="warn">マイルドHVのため本格HVと比べ燃費が劣る（19.0 vs 27.8km/L）</li>
+      <li class="warn">ワイヤレス充電・デジタルインナーミラーは非搭載</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 比較 ===== -->
+<div id="compare" class="section">
+  <div class="section-header">
+    <h2>⚖️ 徹底比較</h2>
+    <p>ヤリスクロス HV Z vs フロンクス vs 競合車種</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">📊</div>2車種 全項目比較</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">比較項目</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>新車価格</td><td>288.7万円</td><td class="win">254.1万円</td></tr>
+        <tr><td>燃費（WLTC）</td><td class="win">27.8km/L</td><td>19.0km/L</td></tr>
+        <tr><td>5年後残価率</td><td class="win">71.9%（実データ）</td><td>47%（推定）</td></tr>
+        <tr><td>5年間実質負担</td><td class="win">約177万円</td><td>約246万円</td></tr>
+        <tr><td>年間ガソリン代</td><td class="win">約6.1万円</td><td>約8.9万円</td></tr>
+        <tr><td>HVバッテリー保証</td><td class="win">10年/20万km</td><td>なし（マイルドHV）</td></tr>
+        <tr><td>最小回転半径</td><td>5.3m</td><td class="win">4.8m</td></tr>
+        <tr><td>全長</td><td>4,180mm</td><td class="win">3,995mm</td></tr>
+        <tr><td>後席の広さ</td><td>やや狭め</td><td class="win">実用的な広さ</td></tr>
+        <tr><td>内装の高級感</td><td>標準的</td><td class="win">高級感あり</td></tr>
+        <tr><td>安全装備の充実度</td><td class="win">非常に充実</td><td>充実</td></tr>
+        <tr><td>長期信頼性データ</td><td class="win">豊富（5年以上）</td><td>少ない（1年強）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">🎯</div>総合評価レーダーチャート</div>
+    <img src="images/single_radar_chart.png" alt="レーダーチャート" class="chart-img">
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="stat-card" style="background:var(--yaris-light);">
+        <div class="label" style="color:var(--yaris);">ヤリスクロス HV Z</div>
+        <div class="value" style="color:var(--yaris);">59.5点</div>
+        <div class="sub">残価率・燃費・信頼性が高評価</div>
+      </div>
+      <div class="stat-card" style="background:var(--fronx-light);">
+        <div class="label" style="color:var(--fronx);">フロンクス</div>
+        <div class="value" style="color:var(--fronx);">53.0点</div>
+        <div class="sub">内装・価格・小回りが高評価</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">🏁</div>競合5車種 横断比較</div>
+    <img src="images/single_competitor_compare.png" alt="競合比較グラフ" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th style="text-align:left;">車種</th><th>価格</th><th>5年残価率</th><th>燃費</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ヤリスクロス HV Z</td><td>288.7万</td><td class="win">71.9%</td><td class="win">27.8km/L</td></tr>
+        <tr><td>フロンクス</td><td>254.1万</td><td>47%（推定）</td><td>19.0km/L</td></tr>
+        <tr><td>ヴェゼル HV</td><td>299.2万</td><td>65%（推定）</td><td>26.0km/L</td></tr>
+        <tr><td>ライズ HV Z</td><td>230.9万</td><td>60%（推定）</td><td>28.0km/L</td></tr>
+        <tr><td>WR-V Z+</td><td>214.5万</td><td>40%（推定）</td><td>16.2km/L</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※残価率はヤリスクロスのみ業者オークション実データ。他は推定値。燃費はWLTCモード。</p>
+  </div>
+</div>
+
+<!-- ===== コスト ===== -->
+<div id="cost" class="section">
+  <div class="section-header">
+    <h2>💴 コスト詳細分析</h2>
+    <p>実質負担額・年間維持費・減価償却</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📉</div>実質負担額の推移</div>
+    <img src="images/single_net_cost.png" alt="実質負担額グラフ" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th style="text-align:left;">保有年数</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3年後売却</td><td>約152万円</td><td class="win">約130万円</td></tr>
+        <tr><td>5年後売却</td><td class="win">約177万円</td><td>約246万円</td></tr>
+        <tr><td>7年後売却</td><td class="win">約278万円</td><td>約315万円</td></tr>
+        <tr><td>10年後売却</td><td class="win">約422万円</td><td>約447万円</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※実質負担額 ＝ 購入費 − 売却額 + 累積維持費。維持費はガソリン代・保険・税金・車検含む年間概算。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">📊</div>1年あたりコスト（長く乗るほど安くなる）</div>
+    <img src="images/single_cost_per_year.png" alt="1年あたりコストグラフ" class="chart-img">
+    <div class="highlight-box green">
+      <h4>✅ 最適保有ゾーン：5〜7年</h4>
+      <p>ヤリスクロスは5年保有で1年あたり約35万円（月2.9万円）が底値圏。それ以上乗り続けても修理費が増えるため、5〜7年での売却が最もコスパ優秀です。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">🧾</div>年間維持費の内訳</div>
+    <img src="images/single_annual_cost.png" alt="年間維持費内訳グラフ" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th style="text-align:left;">費用項目</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>自動車税</td><td>30,500円</td><td>30,500円</td></tr>
+        <tr><td>重量税（年換算）</td><td class="win">0円→6,150円</td><td>7,500円</td></tr>
+        <tr><td>自賠責（年換算）</td><td>8,825円</td><td>8,825円</td></tr>
+        <tr><td>車検費用（年換算）</td><td class="win">約30,000円</td><td>約32,000円</td></tr>
+        <tr><td>ガソリン代（年1万km）</td><td class="win">約61,000円</td><td>約89,000円</td></tr>
+        <tr><td>任意保険（参考）</td><td>約50,000円</td><td>約50,000円</td></tr>
+        <tr><td><strong>年間合計</strong></td><td class="win"><strong>約18〜20万円</strong></td><td><strong>約22〜24万円</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="note">※ガソリン代はレギュラー170円/L・年間走行距離1万kmで計算。任意保険は30歳・等級参考値。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">🔍</div>減価償却をわかりやすく解説</div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">車の減価償却とは何か</div>
+      <div class="accordion-body">
+        <p>車は購入した瞬間から価値が下がり始めます。この「価値の目減り」が減価償却です。</p>
+        <br>
+        <p><strong>例：ヤリスクロス HV Z（288.7万円購入）の場合</strong><br>
+        ・1年後：約281万円の価値（約2.4%減）<br>
+        ・3年後：約238万円の価値（約17.5%減）<br>
+        ・5年後：約208万円の価値（約28.1%減）</p>
+        <br>
+        <p>つまり5年間で約80万円の価値が失われます。これが「減価償却コスト」です。フロンクスは5年後に約135万円の価値が失われる（推定）ため、ヤリスクロスの方が約55万円お得です。</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">長期保有が得な理由</div>
+      <div class="accordion-body">
+        <p>車の価値は最初の数年で急激に下がり、その後は緩やかになります。</p>
+        <br>
+        <p>①<strong>購入直後が最も損</strong>：新車を買った瞬間に約10〜15%の価値が失われます（登録費用・諸費用含む）。</p>
+        <br>
+        <p>②<strong>5年以降は下落ペースが緩やか</strong>：5年乗れば「急落期」を乗り越えており、1年あたりのコストが安定します。</p>
+        <br>
+        <p>③<strong>ローン完済後は月々の支出が激減</strong>：60回払いなら5年でローン完済。その後は維持費だけになり、家計に余裕が生まれます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ローン ===== -->
+<div id="loan" class="section">
+  <div class="section-header">
+    <h2>🏦 ローンシミュレーション</h2>
+    <p>賢いローンの組み方</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">💳</div>ローン返済シミュレーション</div>
+    <img src="images/single_loan_simulation.png" alt="ローンシミュレーション" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th style="text-align:left;">条件</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>借入額（頭金0）</td><td>288.7万円</td><td>254.1万円</td></tr>
+        <tr><td>金利</td><td>2.5%</td><td>2.5%</td></tr>
+        <tr><td>回数</td><td>60回（5年）</td><td>60回（5年）</td></tr>
+        <tr><td>月々の返済額</td><td>約51,000円</td><td>約44,900円</td></tr>
+        <tr><td>総支払額</td><td>約306万円</td><td>約269万円</td></tr>
+        <tr><td>利息総額</td><td>約17.3万円</td><td>約14.9万円</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">📅</div>完済後の家計シミュレーション</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>〜5年目（ローン期間中）</h4>
+        <p>月々の車費用：ローン51,000円 + 維持費16,000円 = <strong>約67,000円/月</strong></p>
+      </div>
+      <div class="timeline-item">
+        <h4>5年目〜（ローン完済後）</h4>
+        <p>月々の車費用：維持費のみ = <strong>約16,000円/月</strong><br>→ 毎月<strong>51,000円</strong>の余裕が生まれる！</p>
+      </div>
+      <div class="timeline-item">
+        <h4>7年目（理想の売却タイミング）</h4>
+        <p>完済から2年間で約122万円の余裕資金が蓄積。次の車の頭金に充当可能。</p>
+      </div>
+    </div>
+    <div class="highlight-box green">
+      <h4>💡 賢いローンの組み方</h4>
+      <p>ディーラーローン（金利3〜5%）より<strong>銀行マイカーローン（金利1〜2%）</strong>の方が総支払額を10〜20万円削減できます。十八親和銀行・長崎銀行等のマイカーローンを事前に確認しましょう。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">🏦</div>佐世保市周辺のおすすめローン</div>
+    <table class="spec-table">
+      <tr><td>十八親和銀行</td><td>マイカーローン 年1.5〜2.5%（要審査）</td></tr>
+      <tr><td>長崎銀行</td><td>マイカーローン 年1.8〜3.0%（要審査）</td></tr>
+      <tr><td>JAバンク長崎</td><td>組合員向け低金利ローン（要確認）</td></tr>
+      <tr><td>ディーラーローン</td><td>トヨタファイナンス 年3.9%（参考）</td></tr>
+    </table>
+    <p class="note">※金利は2026年3月時点の参考値。実際の金利は審査・条件により異なります。</p>
+  </div>
+</div>
+
+<!-- ===== 長期保有 ===== -->
+<div id="longterm" class="section">
+  <div class="section-header">
+    <h2>📅 長期保有（5〜10年）完全分析</h2>
+    <p>Omiさんの「5〜10年乗るつもり」に対応</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">✅</div>長期保有こそ最も賢い選択</div>
+    <div class="highlight-box green">
+      <h4>長期保有が「もったいなくない」理由</h4>
+      <p>5〜10年乗るなら、初期の高い減価償却コストが薄まり、1年あたりのコストは大幅に下がります。ヤリスクロスは長期保有でこそ真価を発揮します。</p>
+    </div>
+    <img src="images/single_cost_per_year.png" alt="1年あたりコスト推移" class="chart-img">
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📊</div>保有年数別・コストサマリー</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">保有年数</th><th>ヤリスクロス HV Z</th><th>フロンクス</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>5年保有（1年あたり）</td><td class="win">約35万円/年</td><td>約49万円/年</td></tr>
+        <tr><td>7年保有（1年あたり）</td><td class="win">約40万円/年</td><td>約45万円/年</td></tr>
+        <tr><td>10年保有（1年あたり）</td><td class="win">約42万円/年</td><td>約45万円/年</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">📈</div>10年間の残価率推移</div>
+    <img src="images/single_resale_rate.png" alt="残価率推移" class="chart-img">
+    <div class="grid-2">
+      <div class="highlight-box red">
+        <h4>ヤリスクロス HV Z</h4>
+        <p>5年後71.9%（実データ）→ 10年後約25%（推定）。7〜8年での売却が最も合理的なタイミングです。</p>
+      </div>
+      <div class="highlight-box blue">
+        <h4>フロンクス</h4>
+        <p>10年後約14%（推定）。マイルドHVのため長期保有での信頼性データが少なく、修理リスクが未知数。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">🎯</div>Omiさんへの長期保有 最終提言</div>
+    <div class="grid-2">
+      <div class="stat-card" style="background:var(--yaris-light);">
+        <div class="label" style="color:var(--yaris);">最適保有期間</div>
+        <div class="value" style="color:var(--yaris);">5〜7年</div>
+        <div class="sub">ヤリスクロス HV Z</div>
+      </div>
+      <div class="stat-card" style="background:#E8F8F0;">
+        <div class="label" style="color:var(--green);">ローン完済後</div>
+        <div class="value" style="color:var(--green);">+2〜3年</div>
+        <div class="sub">維持費のみで乗り続ける</div>
+      </div>
+    </div>
+    <div class="highlight-box gold" style="margin-top:12px;">
+      <h4>💡 長期保有で「もったいなくない」4つの理由</h4>
+      <p>
+        ①<strong>減価償却の観点</strong>：購入直後が最も価値の下落が大きい。5年以降は下落ペースが緩やかになり、1年あたりコストが安定。<br><br>
+        ②<strong>ローン完済後の恩恵</strong>：60回払いで5年後にローン完済。その後は月々の返済がなくなり、維持費だけになる。手取りに余裕が生まれる。<br><br>
+        ③<strong>乗り換えコストの回避</strong>：乗り換えのたびに登録費用・諸費用で20〜40万円かかる。長く乗ることでこのコストを節約できる。<br><br>
+        ④<strong>ヤリスクロスは特に長期向き</strong>：HVバッテリー10年保証＋トヨタの高信頼性で、10年乗っても大きなトラブルリスクが低い。
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== グレード・オプション ===== -->
+<div id="grade" class="section">
+  <div class="section-header">
+    <h2>🏷️ グレード・オプション完全ガイド</h2>
+    <p>Omiさんの条件に合わせた最適な組み合わせを徹底解説</p>
+  </div>
+
+  <!-- グレード価格比較グラフ -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📊</div>グレード別価格比較（HV 2WD）</div>
+    <img src="images/grade_price_compare.png" alt="グレード価格比較" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th>グレード</th><th style="background:rgba(52,152,219,0.1);color:#3498DB;">G HV 2WD</th><th style="background:rgba(231,76,60,0.1);color:#E74C3C;">Z HV 2WD</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>新車価格</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">254.6万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">288.8万円</td></tr>
+        <tr><td>燃費（WLTC）</td><td style="background:rgba(52,152,219,0.04);" class="win">30.2km/L</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">27.8km/L</td></tr>
+        <tr><td>タイヤサイズ</td><td style="background:rgba(52,152,219,0.04);" class="win">16インチ（交換安い）</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">18インチ（交換高い）</td></tr>
+        <tr><td>シート</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">上級ファブリック</td><td style="background:rgba(231,76,60,0.04);" class="win">合成皮革+ツィード</td></tr>
+        <tr><td>BSM・パノラミック</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">オプション追加可</td><td style="background:rgba(231,76,60,0.04);" class="win">標準装備</td></tr>
+        <tr><td>シートヒーター</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">オプション追加可</td><td style="background:rgba(231,76,60,0.04);" class="win">標準装備</td></tr>
+        <tr><td>ディスプレイオーディオ</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">標準（7インチ）</td><td style="background:rgba(231,76,60,0.04);" class="win">Plus（大画面）</td></tr>
+        <tr><td>内装色</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">ブラックのみ</td><td style="background:rgba(231,76,60,0.04);" class="win">ブラック+カーキ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- レーダーチャート -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">🕸️</div>G vs Z 性能レーダーチャート</div>
+    <img src="images/grade_radar.png" alt="グレードレーダーチャート" class="chart-img">
+    <div class="highlight-box" style="background:#EBF5FB;border-left:4px solid #3498DB;margin-top:12px;">
+      <p><strong>📌 ポイント：</strong>GはオプションでZと同等の安全装備を追加可能。燃費はGが優位。Zは内装品質・快適装備で上回る。</p>
+    </div>
+  </div>
+
+  <!-- オプション込み総額比較 -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">💰</div>オプション込み総額比較</div>
+    <img src="images/grade_option_total.png" alt="オプション込み総額" class="chart-img">
+    <div class="highlight-box gold" style="margin-top:12px;">
+      <h4>💡 驚きの事実：GにオプションつけてもZにオプションつけても総額はほぼ同じ！</h4>
+      <p>Gグレード＋推奨オプション ≒ <strong>271.8万円</strong><br>Zグレード＋最小オプション ≒ <strong>295.0万円</strong><br>差額は約23万円。ただし10年間の燃費・タイヤ差を考えると…</p>
+    </div>
+  </div>
+
+  <!-- 燃費コスト比較 -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">⛽</div>燃費差による累積コスト比較</div>
+    <img src="images/grade_fuel_compare.png" alt="燃費コスト比較" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th>保有期間</th><th style="background:rgba(52,152,219,0.1);color:#3498DB;">G（30.2km/L）</th><th style="background:rgba(231,76,60,0.1);color:#E74C3C;">Z（27.8km/L）</th><th>差額</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>年間燃料費</td><td style="background:rgba(52,152,219,0.04);" class="win">約5.8万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">約6.3万円</td><td>+0.5万円/年</td></tr>
+        <tr><td>5年間合計</td><td style="background:rgba(52,152,219,0.04);" class="win">約29万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">約31.5万円</td><td>+2.5万円</td></tr>
+        <tr><td>10年間合計</td><td style="background:rgba(52,152,219,0.04);" class="win">約57.9万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">約62.9万円</td><td>+5万円</td></tr>
+      </tbody>
+    </table>
+    <p class="note">※年間走行距離1万km・ガソリン175円/Lで試算</p>
+  </div>
+
+  <!-- タイヤ交換コスト -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">🔧</div>タイヤ交換コスト比較（長期保有の落とし穴）</div>
+    <img src="images/grade_tire_cost.png" alt="タイヤ交換コスト" class="chart-img">
+    <table class="spec-table" style="margin-top:12px;">
+      <tr><td>G（16インチ）</td><td>4本 約4〜6万円 → 10年で約10万円</td></tr>
+      <tr><td>Z（18インチ）</td><td>4本 約7〜10万円 → 10年で約17万円</td></tr>
+      <tr><td>10年間の差</td><td class="spec-highlight">約7万円の差！長期保有ほど影響大</td></tr>
+    </table>
+    <p class="note">※タイヤ交換は5年ごと1回を想定。価格は銘柄・店舗により異なります。</p>
+  </div>
+
+  <!-- 10年間トータルコスト -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">📈</div>10年間トータルコスト比較</div>
+    <img src="images/grade_10yr_total.png" alt="10年間トータルコスト" class="chart-img">
+    <table class="compare-table" style="margin-top:12px;">
+      <thead>
+        <tr><th>費目</th><th style="background:rgba(52,152,219,0.1);color:#3498DB;">G HV</th><th style="background:rgba(231,76,60,0.1);color:#E74C3C;">Z HV</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>車両本体（オプション込）</td><td style="background:rgba(52,152,219,0.04);" class="win">271.8万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">295.0万円</td></tr>
+        <tr><td>燃料費（10年）</td><td style="background:rgba(52,152,219,0.04);" class="win">57.9万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">62.9万円</td></tr>
+        <tr><td>タイヤ交換（2回）</td><td style="background:rgba(52,152,219,0.04);" class="win">10万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">17万円</td></tr>
+        <tr><td>車検・整備（10年）</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">30万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">30万円</td></tr>
+        <tr><td>税金・保険（10年）</td><td style="background:rgba(52,152,219,0.04);font-weight:600;">25万円</td><td style="background:rgba(231,76,60,0.04);font-weight:600;">25万円</td></tr>
+        <tr><td><strong>10年間合計</strong></td><td style="background:rgba(52,152,219,0.1);" class="win"><strong>394.7万円</strong></td><td style="background:rgba(231,76,60,0.1);font-weight:800;color:#E74C3C;"><strong>429.9万円</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="background:#EBF5FB;border-left:4px solid #3498DB;margin-top:12px;">
+      <h4>🏆 10年乗るならGが約35万円お得！</h4>
+      <p>月換算で約2,900円/月の差。長期保有ほどGグレードの優位性が際立ちます。</p>
+    </div>
+  </div>
+
+  <!-- 推奨オプション一覧 -->
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F5F5F5;">✅</div>Omiさん向け推奨オプション一覧</div>
+    <p style="font-size:13px;color:var(--gray);margin-bottom:12px;">※メーカーオプションは注文時のみ選択可。ディーラーオプションは後付け可能。</p>
+    
+    <div style="background:#FEF9E7;border-radius:12px;padding:14px;margin-bottom:12px;">
+      <p style="font-weight:700;color:#E67E22;margin-bottom:8px;">🔴 メーカーオプション（注文時に決定・後付け不可）</p>
+      <table class="spec-table">
+        <tr><td>パノラミックビューモニター</td><td class="spec-highlight">★必須 33,000〜49,500円</td></tr>
+        <tr><td>BSM+リヤクロストラフィック</td><td class="spec-highlight">★必須 49,500円</td></tr>
+        <tr><td>シートヒーター+ステアリングヒーター</td><td style="font-weight:600;">推奨 11,000円</td></tr>
+        <tr><td>ハンズフリーパワーバックドア</td><td style="font-weight:600;">テニス荷物に便利 77,000円</td></tr>
+        <tr><td>アクセサリーコンセント（HV）</td><td style="font-weight:600;">アウトドア・防災 44,000円</td></tr>
+      </table>
+      <p class="note" style="margin-top:8px;">※GグレードはBSM・パノラミック・シートヒーターがオプション。Zは標準装備。</p>
+    </div>
+
+    <div style="background:#EBF5FB;border-radius:12px;padding:14px;margin-bottom:12px;">
+      <p style="font-weight:700;color:#2980B9;margin-bottom:8px;">🔵 ディーラーオプション（後付け可能）</p>
+      <table class="spec-table">
+        <tr><td>フロアマット（ベーシック）</td><td class="spec-highlight">★必須 14,300円</td></tr>
+        <tr><td>サイドバイザー</td><td style="font-weight:600;">推奨 17,600円</td></tr>
+        <tr><td>ドライブレコーダー（前後）</td><td class="spec-highlight">★必須 社外品2〜4万円</td></tr>
+        <tr><td>アームレスト</td><td style="font-weight:600;">あると快適 19,800円</td></tr>
+      </table>
+    </div>
+
+    <div style="background:#FDEDEC;border-radius:12px;padding:14px;">
+      <p style="font-weight:700;color:#C0392B;margin-bottom:8px;">❌ 不要・優先度低いオプション</p>
+      <table class="spec-table">
+        <tr><td>ボディコーティング（ディーラー）</td><td style="font-weight:600;">洗車しない方針なら不要。専門店の方が安い</td></tr>
+        <tr><td>寒冷地仕様</td><td style="font-weight:600;">佐世保は温暖なので不要</td></tr>
+        <tr><td>ナビキット</td><td style="font-weight:600;">スマホ連携で代替可。標準DAで十分</td></tr>
+        <tr><td>LEDヘッドランプ（Gのみ）</td><td style="font-weight:600;">71,500円と高額。Zならフル標準</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 最終結論 -->
+  <div class="card" style="border:2px solid #3498DB;">
+    <div class="card-title"><div class="icon" style="background:#EBF5FB;">🏆</div>Omiさんへの最終推奨</div>
+    
+    <div style="background:linear-gradient(135deg,#EBF5FB,#D6EAF8);border-radius:12px;padding:16px;margin-bottom:12px;">
+      <p style="font-size:16px;font-weight:800;color:#2980B9;margin-bottom:8px;">案①：ハイブリッドG 2WD ＋ 推奨オプション</p>
+      <p style="font-size:13px;margin-bottom:6px;">車両本体 254.6万円 ＋ オプション計 約17.2万円</p>
+      <p style="font-size:18px;font-weight:900;color:#2980B9;">合計 約271.8万円</p>
+      <p style="font-size:12px;color:var(--gray);margin-top:6px;">10年間トータル：394.7万円 / 月換算 3.3万円</p>
+      <p style="font-size:13px;margin-top:8px;">✅ 燃費最強（30.2km/L）<br>✅ タイヤ交換費用が安い（16インチ）<br>✅ 10年で約35万円お得<br>⚠️ 内装はZより質素</p>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#FDEDEC,#FADBD8);border-radius:12px;padding:16px;">
+      <p style="font-size:16px;font-weight:800;color:#E74C3C;margin-bottom:8px;">案②：ハイブリッドZ 2WD ＋ 最小オプション</p>
+      <p style="font-size:13px;margin-bottom:6px;">車両本体 288.8万円 ＋ オプション計 約6.2万円</p>
+      <p style="font-size:18px;font-weight:900;color:#E74C3C;">合計 約295.0万円</p>
+      <p style="font-size:12px;color:var(--gray);margin-top:6px;">10年間トータル：429.9万円 / 月換算 3.6万円</p>
+      <p style="font-size:13px;margin-top:8px;">✅ 安全装備・快適装備が最初から全部入り<br>✅ 合成皮革シートで「人を乗せても恥ずかしくない」<br>✅ 大画面ディスプレイオーディオPlus<br>⚠️ 10年間で約35万円多くかかる</td></p>
+    </div>
+
+    <div class="highlight-box gold" style="margin-top:16px;">
+      <h4>🎯 Omiさんへのズバリ結論</h4>
+      <p>「人を乗せても恥ずかしくない」「最新技術大好き」という条件を重視するなら<strong>Z推奨</strong>。月額300円の差（35万円÷10年÷12ヶ月）で内装・装備の満足度が大きく変わります。一方、純粋にコスパ・燃費・長期維持費を最小化したいなら<strong>G推奨</strong>。どちらを選んでも後悔しない選択です。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== アドバイス ===== -->
+<div id="advice" class="section">
+  <div class="section-header">
+    <h2>💡 購入アドバイス</h2>
+    <p>具体的な購入手順・注意点</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">🗺️</div>購入ステップ（推奨順）</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>STEP 1：ミラココアの下取り査定</h4>
+        <p>ディーラー査定前にMOTA・ナビクル等の一括査定サービスを活用し、相場を把握。複数店で査定を取得してからディーラー交渉に臨む。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>STEP 2：銀行マイカーローンの事前審査</h4>
+        <p>十八親和銀行・長崎銀行等で事前審査を申し込む。ディーラーローンより金利が低い場合が多く、総支払額を削減できる。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>STEP 3：試乗・グレード確認</h4>
+        <p>佐世保市内のトヨタディーラーで試乗。HV Z（288.7万円）とHV G（239.4万円）の装備差を確認。予算次第でGグレードも選択肢。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>STEP 4：値引き交渉（2026年3月は絶好機）</h4>
+        <p>新車は決算期（3月・9月）が最も値引きが大きい。2026年3月は今まさに絶好のタイミング。目標値引き：10〜15万円。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>STEP 5：オプション選定</h4>
+        <p>ETC・フロアマット・ドライブレコーダーは必須。不要なオプションは断る勇気が大切。リセールに影響しないオプションは控えめに。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--yaris-light);">🎨</div>リセールに有利なカラー選択</div>
+    <table class="spec-table">
+      <tr><td>🥇 最強</td><td class="spec-highlight">プラチナホワイトパールマイカ</td></tr>
+      <tr><td>🥈 強い</td><td>ブラック（ブラックマイカ）</td></tr>
+      <tr><td>🥉 普通</td><td>シルバーメタリック</td></tr>
+      <tr><td>⚠️ 注意</td><td>個性的な色（黄・緑等）は避けた方が無難</td></tr>
+    </table>
+    <p class="note">※白・黒・シルバーは中古車市場での需要が高く、売却時に有利です。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:var(--fronx-light);">🔧</div>長期保有のメンテナンス注意点</div>
+    <ul class="checklist">
+      <li>エンジンオイル交換：5,000〜10,000kmごと（HVは比較的長め）</li>
+      <li>タイヤ交換：5〜6年または50,000kmが目安</li>
+      <li>ブレーキパッド：HVは回生ブレーキで長持ち（通常より長い）</li>
+      <li>HVバッテリー：10年/20万km保証内は基本無償交換</li>
+      <li class="info">洗車・掃除は気になったときだけでOK（Omiさんの性格に合っている）</li>
+      <li class="warn">禁煙車維持でリセールバリューを守る（喫煙は大幅減額要因）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FEF9E7;">🤔</div>新車 vs 中古車 どちらが良いか</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th style="text-align:left;">観点</th><th>新車</th><th>中古車（2〜3年落ち）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>購入価格</td><td>288.7万円</td><td class="win">約230〜250万円</td></tr>
+        <tr><td>保証</td><td class="win">メーカー保証フル</td><td>残存保証のみ</td></tr>
+        <tr><td>禁煙車の確実性</td><td class="win">確実</td><td>要確認</td></tr>
+        <tr><td>最新装備</td><td class="win">最新</td><td>やや古い可能性</td></tr>
+        <tr><td>コスパ</td><td>普通</td><td class="win">高い</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box gold" style="margin-top:12px;">
+      <h4>💡 Omiさんへの推薦</h4>
+      <p>「禁煙車がいい」「最新技術大好き」という条件から、<strong>新車または認定中古車（1〜2年落ち・禁煙確認済み）</strong>がベスト。2026年3月は決算期のため新車値引きが最大になるタイミングです。</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>本資料は2026年3月時点の情報をもとに作成しています。</p>
+  <p>残価率データ：業者オークション相場（junku.com）より。価格・スペックはメーカー公式サイトより。</p>
+  <p>実際の購入・売却価格は市場状況・個体状態・地域により異なります。</p>
+  <p style="margin-top:8px;">Omiさん専用 車選びガイド © 2026</p>
+</footer>
+
+<script>
+function showSection(id, el) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (el) el.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function toggleAccordion(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+function animateBars() {
+  document.querySelectorAll('.rating-bar .fill').forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0%';
+    setTimeout(() => { bar.style.width = width; }, 100);
+  });
+}
+setTimeout(animateBars, 500);
+</script>
+</body>
+</html>
