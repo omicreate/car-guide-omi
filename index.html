@@ -257,6 +257,9 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: cent
     <div class="nav-item" onclick="showSection('loan',this)">🏦 ローン</div>
     <div class="nav-item" onclick="showSection('longterm',this)">📅 長期保有</div>
     <div class="nav-item" onclick="showSection('grade',this)">🏷️ グレード選び</div>
+    <div class="nav-item" onclick="showSection('delica',this)">🟢 デリカミニ</div>
+    <div class="nav-item" onclick="showSection('rival',this)">🏁 競合比較</div>
+    <div class="nav-item" onclick="showSection('options',this)">🔧 オプション</div>
     <div class="nav-item" onclick="showSection('advice',this)">💡 アドバイス</div>
   </div>
 </div>
@@ -903,6 +906,385 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: cent
 </div>
 
 <!-- ===== アドバイス ===== -->
+<!-- ===== デリカミニ ===== -->
+<div id="delica" class="section">
+  <div class="section-header">
+    <h2>🟢 デリカミニ 徹底分析</h2>
+    <p>「軽自動車なのにSUVらしい」個性派。ヤリスクロスと徹底比較</p>
+  </div>
+
+  <!-- 結論カード -->
+  <div style="background:linear-gradient(135deg,#1A6B3C,#0B3D0B);border-radius:12px;padding:16px;margin-bottom:16px;">
+    <div style="font-size:14px;font-weight:bold;color:#2ECC71;margin-bottom:8px;">🎯 デリカミニの総合評価</div>
+    <div style="font-size:13px;color:#ccc;line-height:1.7;">
+      デリカミニは<strong style="color:#2ECC71;">軽自動車最強クラスのリセールバリュー（74.98%）</strong>を誇り、個性的なSUVデザインで「人を乗せても恥ずかしくない」軽自動車です。ただし燃費（19.2km/L）がヤリスクロスHV（27.8km/L）に大きく劣り、<strong style="color:#FFD700;">10年間の燃料費差は約26万円</strong>になります。新車価格が約75万円安く、維持費（自動車税）も年間25,200円安いため、<strong style="color:#2ECC71;">10年間トータルコストはデリカミニの方が約51万円お得</strong>です。
+    </div>
+  </div>
+
+  <!-- スペック比較表 -->
+  <div class="card">
+    <div class="card-title">📊 ヤリスクロス vs デリカミニ 基本スペック比較</div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <tr style="background:#1a1a3e;">
+        <th style="padding:8px;text-align:left;color:#aaa;">項目</th>
+        <th style="padding:8px;text-align:center;color:#E8341C;">ヤリスクロス HV Z</th>
+        <th style="padding:8px;text-align:center;color:#2ECC71;">デリカミニ T Premium</th>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:8px;color:#aaa;">新車価格</td>
+        <td style="padding:8px;text-align:center;color:#fff;">288.8万円</td>
+        <td style="padding:8px;text-align:center;color:#2ECC71;"><strong>213.9万円</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#0d0d1e;">
+        <td style="padding:8px;color:#aaa;">燃費（WLTC）</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>27.8km/L</strong></td>
+        <td style="padding:8px;text-align:center;color:#fff;">19.2km/L</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:8px;color:#aaa;">自動車税（年）</td>
+        <td style="padding:8px;text-align:center;color:#fff;">36,000円</td>
+        <td style="padding:8px;text-align:center;color:#2ECC71;"><strong>10,800円</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#0d0d1e;">
+        <td style="padding:8px;color:#aaa;">5年後残価率</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>71.9%</strong>（実データ）</td>
+        <td style="padding:8px;text-align:center;color:#fff;">65%（推定）</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:8px;color:#aaa;">室内高</td>
+        <td style="padding:8px;text-align:center;color:#fff;">1,220mm</td>
+        <td style="padding:8px;text-align:center;color:#2ECC71;"><strong>1,365mm</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#0d0d1e;">
+        <td style="padding:8px;color:#aaa;">車格</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>普通車</strong></td>
+        <td style="padding:8px;text-align:center;color:#fff;">軽自動車</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:8px;color:#aaa;">ディスプレイ</td>
+        <td style="padding:8px;text-align:center;color:#fff;">大画面Plus</td>
+        <td style="padding:8px;text-align:center;color:#2ECC71;"><strong>9インチ（新型）</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;background:#0d0d1e;">
+        <td style="padding:8px;color:#aaa;">安全装備</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>Toyota Safety Sense</strong></td>
+        <td style="padding:8px;text-align:center;color:#fff;">三菱e-Assist</td>
+      </tr>
+      <tr style="border-bottom:1px solid #333;">
+        <td style="padding:8px;color:#aaa;">HV・電動化</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>ハイブリッド</strong></td>
+        <td style="padding:8px;text-align:center;color:#fff;">ガソリン（新型MHV廃止）</td>
+      </tr>
+      <tr style="background:#0d0d1e;">
+        <td style="padding:8px;color:#aaa;">ブランド信頼性</td>
+        <td style="padding:8px;text-align:center;color:#E8341C;"><strong>トヨタ（最高）</strong></td>
+        <td style="padding:8px;text-align:center;color:#fff;">三菱（普通）</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- 残価率グラフ -->
+  <div class="card">
+    <div class="card-title">📉 残価率推移比較（実データ＋推定）</div>
+    <img src="images/delica_resale_compare.png" style="width:100%;border-radius:8px;" alt="残価率推移比較">
+    <div style="font-size:11px;color:#aaa;margin-top:6px;">※ヤリスクロスは業者オークション実データ（junku.com）。デリカミニは業者オークション実データ（car-resale-value.com）＋5年以降は推定。</div>
+    <div style="background:#1a1a3e;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;">
+      <strong style="color:#FFD700;">📌 ポイント：</strong>デリカミニは<strong>1〜2年落ちの残価率が非常に高い（85〜87%）</strong>のが特徴。ただし5年以降はヤリスクロスに逆転される傾向。<strong>5〜7年乗るならヤリスクロスが有利、3年以内に売るならデリカミニも優秀。</strong>
+    </div>
+  </div>
+
+  <!-- 10年間コスト比較 -->
+  <div class="card">
+    <div class="card-title">💴 10年間トータルコスト比較</div>
+    <img src="images/delica_10yr_cost.png" style="width:100%;border-radius:8px;" alt="10年間コスト比較">
+    <div style="background:#1a1a3e;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;">
+      <strong style="color:#FFD700;">📌 意外な結論：</strong>新車価格はデリカミニが75万円安いが、燃費差・税金差を加味すると<strong style="color:#2ECC71;">10年間トータルではデリカミニが約51万円お得（月換算4,250円/月の差）</strong>。ただし「普通車に乗っている安心感」「燃費の良さ」「ブランド信頼性」はヤリスクロスが上。
+    </div>
+  </div>
+
+  <!-- 燃費比較 -->
+  <div class="card">
+    <div class="card-title">⛽ 燃費・年間燃料費比較</div>
+    <img src="images/delica_fuel_compare.png" style="width:100%;border-radius:8px;" alt="燃費比較">
+    <div style="background:#1a1a3e;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;">
+      <strong style="color:#FFD700;">📌 燃費の差：</strong>ヤリスクロスHVは27.8km/L、デリカミニターボは19.2km/L。年間10,000km走行で<strong style="color:#E8341C;">年間約2.6万円の差（10年で26万円）</strong>。ガソリン価格が上がるほどこの差は拡大します。
+    </div>
+  </div>
+
+  <!-- レーダーチャート -->
+  <div class="card">
+    <div class="card-title">🎯 3車種 総合評価レーダーチャート</div>
+    <img src="images/delica_radar.png" style="width:100%;border-radius:8px;" alt="レーダーチャート">
+  </div>
+
+  <!-- ローン比較 -->
+  <div class="card">
+    <div class="card-title">🏦 月々ローン返済額比較</div>
+    <img src="images/delica_loan_compare.png" style="width:100%;border-radius:8px;" alt="ローン比較">
+    <div style="background:#1a1a3e;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;">
+      <strong style="color:#FFD700;">📌 月々の差：</strong>ヤリスクロスZとデリカミニTプレミアムの月々返済差は<strong>約1.3万円</strong>（頭金なし・2.5%・60回）。年収500万円のOmiさんには、どちらも無理なく返済できる範囲です。
+    </div>
+  </div>
+
+  <!-- デリカミニのグレード推薦 -->
+  <div class="card">
+    <div class="card-title">🏷️ デリカミニ おすすめグレード（Omiさん向け）</div>
+    <div style="display:grid;gap:10px;margin-top:10px;">
+      <div style="background:linear-gradient(135deg,#1A6B3C22,#0B3D0B44);border:1px solid #2ECC71;border-radius:10px;padding:14px;">
+        <div style="font-size:13px;font-weight:bold;color:#2ECC71;">🥇 第1推薦：T Premium 2WD（新型）</div>
+        <div style="font-size:12px;color:#ccc;margin-top:6px;line-height:1.7;">
+          新車価格：約224.9万円（新型2025年10月〜）<br>
+          ターボエンジン（64PS）で走りに余裕あり。9インチディスプレイ・フル液晶メーター・合成皮革シート標準装備。最新技術好きのOmiさんに最適。リセールも軽自動車最強クラス。
+        </div>
+      </div>
+      <div style="background:#1a1a3e;border:1px solid #555;border-radius:10px;padding:14px;">
+        <div style="font-size:13px;font-weight:bold;color:#aaa;">🥈 第2推薦：G Premium 2WD（新型）</div>
+        <div style="font-size:12px;color:#aaa;margin-top:6px;line-height:1.7;">
+          新車価格：約209.4万円（新型）<br>
+          NAエンジン（52PS）で燃費がやや良い（20.9km/L）。タウンユース中心なら十分。価格を抑えたい場合の選択肢。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- デリカミニの注意点 -->
+  <div class="card">
+    <div class="card-title">⚠️ デリカミニを選ぶ前に知っておくこと</div>
+    <div style="display:grid;gap:8px;margin-top:10px;">
+      <div style="background:#2a1a0a;border-left:3px solid #FF6B35;padding:10px;border-radius:6px;font-size:12px;">
+        <strong style="color:#FF6B35;">燃費がヤリスクロスの約69%</strong><br>
+        <span style="color:#ccc;">27.8km/L vs 19.2km/L。テニスへの週末ドライブ中心でも、長距離になるほど差が出ます。</span>
+      </div>
+      <div style="background:#2a1a0a;border-left:3px solid #FF6B35;padding:10px;border-radius:6px;font-size:12px;">
+        <strong style="color:#FF6B35;">新型（2025年10月〜）はMHV廃止</strong><br>
+        <span style="color:#ccc;">マイルドハイブリッドが廃止され、純ガソリン車になりました。燃費改善の恩恵がなくなっています。</span>
+      </div>
+      <div style="background:#2a1a0a;border-left:3px solid #FF6B35;padding:10px;border-radius:6px;font-size:12px;">
+        <strong style="color:#FF6B35;">軽自動車という車格</strong><br>
+        <span style="color:#ccc;">「人を乗せても恥ずかしくない」という点では、個性的なデザインで補えますが、高速道路や長距離では普通車の余裕には敵いません。</span>
+      </div>
+      <div style="background:#1a2a1a;border-left:3px solid #2ECC71;padding:10px;border-radius:6px;font-size:12px;">
+        <strong style="color:#2ECC71;">三菱ディーラーの佐世保市内の状況</strong><br>
+        <span style="color:#ccc;">佐世保市内に三菱ディーラーはあります。ただしトヨタに比べるとサービス拠点数は少なめです。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 最終判断 -->
+  <div style="background:linear-gradient(135deg,#1a1a3e,#0d0d2e);border:2px solid #FFD700;border-radius:12px;padding:16px;">
+    <div style="font-size:14px;font-weight:bold;color:#FFD700;margin-bottom:10px;">🏆 Omiさんへの最終判断</div>
+    <div style="display:grid;gap:10px;">
+      <div style="background:#1A6B3C22;border-radius:8px;padding:12px;">
+        <div style="font-size:13px;font-weight:bold;color:#2ECC71;">デリカミニを選ぶべき人</div>
+        <div style="font-size:12px;color:#ccc;margin-top:6px;line-height:1.7;">
+          ✅ 「軽自動車でも個性的なデザインで十分」と思える<br>
+          ✅ 月々の返済を少し抑えたい（約1.3万円/月の差）<br>
+          ✅ 室内の広さ・高さを重視する<br>
+          ✅ 10年間トータルコストを最小化したい<br>
+          ✅ 奥様のキャンバスと合わせて「軽2台」でOK
+        </div>
+      </div>
+      <div style="background:#E8341C22;border-radius:8px;padding:12px;">
+        <div style="font-size:13px;font-weight:bold;color:#E8341C;">ヤリスクロスを選ぶべき人</div>
+        <div style="font-size:12px;color:#ccc;margin-top:6px;line-height:1.7;">
+          ✅ 「普通車に乗っている」安心感・ステータスが欲しい<br>
+          ✅ 燃費の良さを長期間享受したい<br>
+          ✅ トヨタブランドの信頼性・全国ディーラー網を重視<br>
+          ✅ HVバッテリー10年保証で修理リスクを下げたい<br>
+          ✅ 5〜7年後のリセールを最大化したい
+        </div>
+      </div>
+    </div>
+    <div style="background:#2a2a1a;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;color:#FFD700;">
+      <strong>💡 結論：</strong>Omiさんの「最新技術大好き・人を乗せても恥ずかしくない・減価償却で後悔しない」という条件を総合すると、<strong>ヤリスクロスHV Zが依然として最適解</strong>です。デリカミニは「軽自動車で十分・コストを抑えたい」場合の有力な選択肢です。
+    </div>
+  </div>
+
+</div>
+
+<div id="rival" class="section">
+  <div class="section-header">
+    <h2>🏁 競合車種 徹底比較</h2>
+    <p>ヤリスクロス HV Z vs 2026年最新ライバル6車種（2026年3月時点）</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FFF3E0;">🆕</div>2026年3月 ヤリスクロス 一部改良まとめ</div>
+    <div class="highlight-box gold">
+      <h4>発表：2026年2月20日 / 発売：2026年3月2日（本日！）</h4>
+      <p>今まさに最新モデルが発売されたタイミングです。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+      <div class="highlight-box" style="background:#E8F8F0;border-left:4px solid #27ae60;">
+        <h4 style="color:#27ae60;">✅ 追加・改善された装備</h4>
+        <ul style="margin:8px 0;padding-left:16px;font-size:13px;">
+          <li><strong>10.5インチDA Plus</strong>がZ/G/Z"Adventure"に標準化</li>
+          <li><strong>電動パーキングブレーキ（EPB）</strong>採用</li>
+          <li>新色「アーバンロック」追加（全グレード）</li>
+          <li>ドアミラー・アンテナ ブラック加飾（全グレード）</li>
+          <li>寒冷地仕様 4WD標準化</li>
+          <li>特別仕様車Z"URBANO" 新色追加</li>
+        </ul>
+      </div>
+      <div class="highlight-box" style="background:#FDEDEC;border-left:4px solid #e74c3c;">
+        <h4 style="color:#e74c3c;">❌ 廃止・削除された装備</h4>
+        <ul style="margin:8px 0;padding-left:16px;font-size:13px;">
+          <li><strong>アドバンストパーク</strong>（自動駐車支援）廃止</li>
+          <li><strong>デジタルキー</strong>廃止</li>
+          <li><strong>PVM床下透過表示機能</strong>廃止</li>
+          <li><strong>PKSB後方接近車両・後方歩行者検知</strong>廃止</li>
+          <li>GR SPORTガソリン2WD廃止</li>
+          <li>ナビレディパッケージ廃止</li>
+        </ul>
+      </div>
+    </div>
+    <img src="images/yariscross_2026_changes.png" style="width:100%;border-radius:12px;margin-top:12px;" alt="2026年改良変更点">
+    <p class="note">※アドバンストパーク（自動駐車）廃止は多くのユーザーが残念に感じている変更点。2025年以前モデルの中古車ではオプション設定あり。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#EBF5FB;">📊</div>競合6車種 総合比較レーダーチャート</div>
+    <img src="images/rival_radar_chart.png" style="width:100%;border-radius:12px;" alt="競合レーダーチャート">
+    <p class="note">ヤリスクロス HV Zは燃費・リセールバリュー・長期信頼性で他車を圧倒。価格のお得感はやや劣るが、トータルコストでは優位。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F4ECF7;">💰</div>価格 vs 燃費 散布図（バブル=残価率）</div>
+    <img src="images/rival_price_fuel_scatter.png" style="width:100%;border-radius:12px;" alt="価格vs燃費散布図">
+    <p class="note">ヤリスクロス HV Zは「燃費良×残価率高」のベストゾーンに位置。WR-Vは安いが燃費が大幅に劣る。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FDFEFE;">🏆</div>競合6車種 10年間トータルコスト比較</div>
+    <img src="images/rival_10yr_total_cost.png" style="width:100%;border-radius:12px;" alt="10年間コスト比較">
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#EBF5FB;">📋</div>競合車種 全項目比較表（2026年3月最新）</div>
+    <div style="overflow-x:auto;">
+    <table class="compare-table" style="font-size:12px;min-width:600px;">
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th style="background:#FF6B6B;color:white;">ヤリスクロス<br>HV Z</th>
+          <th>WR-V Z</th>
+          <th>キックス<br>e-POWER</th>
+          <th>CX-30</th>
+          <th>フロンクス<br>HV</th>
+          <th>デリカミニ<br>T Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>新車価格</td><td class="win">299.2万</td><td>239.8万</td><td>308.3万</td><td>277.2万</td><td>254.1万</td><td>221.0万</td></tr>
+        <tr><td>燃費WLTC</td><td class="win">27.8km/L</td><td>16.2km/L</td><td>23.0km/L</td><td>15.5km/L</td><td>19.0km/L</td><td>19.5km/L</td></tr>
+        <tr><td>5年後残価率</td><td class="win">71.9%</td><td>60%</td><td>45%</td><td>65%</td><td>60%</td><td>70%</td></tr>
+        <tr><td>自動車税/年</td><td>36,000円</td><td>36,000円</td><td>36,000円</td><td>36,000円</td><td class="win">10,800円</td><td class="win">10,800円</td></tr>
+        <tr><td>10年トータル</td><td>394万</td><td>394万</td><td>426万</td><td>435万</td><td class="win">362万</td><td class="win">331万</td></tr>
+        <tr><td>安全装備</td><td class="win">TSS全標準</td><td>Honda SENSING</td><td>ProPILOT</td><td>i-ACTIVSENSE</td><td>DSBS</td><td>e-Assist</td></tr>
+        <tr><td>HV保証</td><td class="win">10年/20万km</td><td>なし</td><td>なし</td><td>なし</td><td>なし</td><td>なし</td></tr>
+        <tr><td>ディスプレイ</td><td class="win">10.5インチ</td><td>9インチ</td><td>9インチ</td><td>8.8インチ</td><td>9インチ</td><td>9インチ</td></tr>
+        <tr><td>最低地上高</td><td>175mm</td><td>195mm</td><td>170mm</td><td>175mm</td><td>180mm</td><td class="win">190mm</td></tr>
+        <tr><td>全長</td><td>4,180mm</td><td>4,290mm</td><td>4,290mm</td><td>4,395mm</td><td>3,995mm</td><td class="win">3,395mm</td></tr>
+        <tr><td>室内高</td><td>1,215mm</td><td>1,265mm</td><td>1,260mm</td><td>1,200mm</td><td>1,215mm</td><td class="win">1,455mm</td></tr>
+        <tr><td>ラゲッジ</td><td>390L</td><td>458L</td><td class="win">423L</td><td>430L</td><td>308L</td><td>350L</td></tr>
+        <tr><td>メーカー信頼性</td><td class="win">トヨタ★★★★★</td><td>ホンダ★★★★</td><td>日産★★★</td><td>マツダ★★★★</td><td>スズキ★★★★</td><td>三菱★★★</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FDFEFE;">🎯</div>Omiさんへの競合比較まとめ</div>
+    <table class="spec-table">
+      <tr><td>🥇 最推薦</td><td class="spec-highlight">ヤリスクロス HV Z（燃費・リセール・信頼性の三冠）</td></tr>
+      <tr><td>🥈 次点</td><td>ヤリスクロス HV G（コスパ最優先ならこちら）</td></tr>
+      <tr><td>🥉 コスト重視</td><td>デリカミニ T Premium（10年トータル最安・個性的）</td></tr>
+      <tr><td>⚠️ 注意</td><td>キックス e-POWER（残価率が低く長期保有に不向き）</td></tr>
+      <tr><td>⚠️ 注意</td><td>CX-30ガソリン（燃費が悪く10年コストが最高額）</td></tr>
+    </table>
+    <div class="highlight-box gold" style="margin-top:12px;">
+      <h4>💡 最終判断</h4>
+      <p>「最新技術大好き・燃費重視・5〜10年乗る・人を乗せても恥ずかしくない」というOmiさんの条件を最も満たすのは、依然として<strong>ヤリスクロス HV Z（2026年3月発売の最新モデル）</strong>です。</p>
+    </div>
+  </div>
+</div>
+
+<div id="options" class="section">
+  <div class="section-header">
+    <h2>🔧 オプション完全ガイド</h2>
+    <p>後悔しないオプション選択 ＋ ユーザーが後悔した装備まとめ</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#FDEDEC;">😢</div>後悔度ランキング（ユーザー口コミ分析）</div>
+    <img src="images/option_regret_ranking.png" style="width:100%;border-radius:12px;" alt="オプション後悔度ランキング">
+    <div class="highlight-box" style="background:#FDEDEC;border-left:4px solid #e74c3c;margin-top:12px;">
+      <h4 style="color:#e74c3c;">⚠️ 重要：2026年モデルで廃止された装備</h4>
+      <p>「アドバンストパーク（自動駐車）」「デジタルキー」「PKSB後方歩行者検知」は2026年3月発売の最新モデルでは<strong>選択不可</strong>になりました。これらを重視する場合は<strong>2025年以前の中古車</strong>を検討する価値があります。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#E8F8F0;">✅</div>Omiさん向け 推奨オプション構成（HV Z）</div>
+    <table class="compare-table">
+      <thead>
+        <tr><th>優先度</th><th>オプション名</th><th>価格（参考）</th><th>理由</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="win">必須</td><td>ドライブレコーダー（前後）</td><td>約4.4万円</td><td>事故・あおり運転対策。後悔度No.2</td></tr>
+        <tr><td class="win">必須</td><td>フロアマット（純正）</td><td>約2.2万円</td><td>リセール時の内装保護</td></tr>
+        <tr><td class="win">必須</td><td>ETC2.0</td><td>標準装備化</td><td>2026年モデルで標準装備済み</td></tr>
+        <tr><td style="color:#f39c12;">推奨</td><td>アダプティブハイビーム＋カラーHUD</td><td>約6.6万円</td><td>夜間安全性・視認性大幅向上</td></tr>
+        <tr><td style="color:#f39c12;">推奨</td><td>電動テールゲート</td><td>約5.5万円</td><td>荷物多い時・雨天時に便利。後悔多数</td></tr>
+        <tr><td style="color:#f39c12;">推奨</td><td>AC100V/1500W電源</td><td>約3.3万円</td><td>アウトドア・災害時に活躍。HV専用</td></tr>
+        <tr><td style="color:#3498db;">任意</td><td>ボディコーティング</td><td>約5〜10万円</td><td>洗車しない派には特に有効</td></tr>
+        <tr><td style="color:#3498db;">任意</td><td>サイドバイザー</td><td>約1.5万円</td><td>雨天換気に便利</td></tr>
+        <tr><td style="color:#e74c3c;">不要</td><td>ナンバーフレーム</td><td>約0.3万円</td><td>リセール時に外す手間</td></tr>
+        <tr><td style="color:#e74c3c;">不要</td><td>高額カーナビ追加</td><td>—</td><td>10.5インチDA Plus標準装備で十分</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box gold" style="margin-top:12px;">
+      <h4>💡 推奨オプション合計金額目安</h4>
+      <p>必須：約6.6万円 ＋ 推奨：約15.4万円 ＝ <strong>合計約22万円</strong><br>
+      ヤリスクロス HV Z（299.2万）＋ 推奨オプション ≒ <strong>約321万円</strong></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#EBF5FB;">🔍</div>競合車種 オプション比較（後悔ポイント）</div>
+    <table class="compare-table" style="font-size:12px;">
+      <thead>
+        <tr><th>車種</th><th>後悔されやすいオプション</th><th>後悔理由</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ヤリスクロス</td><td>電動テールゲート未選択</td><td>後付け不可・荷物時に不便</td></tr>
+        <tr><td>ヤリスクロス</td><td>アドバンストパーク未選択（旧モデル）</td><td>2026年モデルで廃止済み</td></tr>
+        <tr><td>ヤリスクロス</td><td>カラーHUD未選択</td><td>速度確認が格段に楽になる</td></tr>
+        <tr><td>WR-V</td><td>Honda SENSING Elite未選択</td><td>渋滞追従ACCなしで疲れる</td></tr>
+        <tr><td>WR-V</td><td>ナビ・ETC別途購入</td><td>後付けで高くつく</td></tr>
+        <tr><td>キックス</td><td>ProPILOT未選択</td><td>e-POWERの醍醐味が半減</td></tr>
+        <tr><td>CX-30</td><td>360°ビューモニター未選択</td><td>駐車時に不便</td></tr>
+        <tr><td>フロンクス</td><td>後席シートヒーター未選択</td><td>冬の後席が寒い</td></tr>
+        <tr><td>デリカミニ</td><td>全方位モニター未選択</td><td>軽自動車は駐車スペースが狭い場所多い</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon" style="background:#F4ECF7;">💡</div>オプション選択の鉄則（Omiさん向け）</div>
+    <ul class="checklist">
+      <li><strong>後付けできないものを優先</strong>：電動テールゲート・HUD・AC電源は後付け不可</li>
+      <li><strong>リセールに影響しないオプションは控えめに</strong>：個人趣味のカスタムは売却時マイナス</li>
+      <li><strong>ディーラーオプションは値引き交渉の余地あり</strong>：メーカーオプションより交渉しやすい</li>
+      <li><strong>2026年モデルで標準化されたものは追加不要</strong>：10.5インチDA・ETC2.0・シートヒーターは標準</li>
+      <li class="warn"><strong>廃止装備を重視するなら2025年以前の中古車も選択肢</strong>：アドバンストパーク・デジタルキーが欲しい場合</li>
+      <li class="info"><strong>ボディコーティングは洗車しない派に特に有効</strong>：Omiさんの性格に合っている</li>
+    </ul>
+  </div>
+</div>
+
 <div id="advice" class="section">
   <div class="section-header">
     <h2>💡 購入アドバイス</h2>
